@@ -107,7 +107,6 @@ function payLoan() {
 store.dispatch(deposit(500));
 store.dispatch(withdraw(200));
 console.log(store.getState());
-
 store.dispatch(requestLoan(1000, "Buy a car"));
 console.log(store.getState());
 store.dispatch(payLoan());
@@ -126,3 +125,8 @@ function updateName(fullName) {
     payload: fullName,
   };
 }
+
+store.dispatch(createCustomer("Jamiu Abidemi", "355767788"));
+console.log(store.getState());
+store.dispatch(updateName("Abdulkareem Abidemi"));
+console.log(store.getState());
